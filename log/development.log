@@ -1,0 +1,390 @@
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-07-03 11:07:19) [GET]
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 113ms (View: 7, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-03 11:13:32) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSQLite3::SQLException: no such table: users: SELECT * FROM "users" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: users: SELECT * FROM "users" ):
+  app/controllers/users_controller.rb:5:in `index'
+
+Rendered rescues/_trace (24.5ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (14.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (7.7ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20110703101249)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "email" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110703101249')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-03 11:15:26) [GET]
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 132ms (View: 111, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-07-03 11:15:30) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 10ms (View: 7, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2011-07-03 11:16:02) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 27ms (View: 4, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2011-07-03 11:18:09) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"gHBrNX4bgnTOHJb0+s7tlFL5HcUSuqR5gOZy5OsFnt0=", "user"=>{"name"=>"harrrison", "email"=>"harrison@thebarkers.me.uk"}}
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("name", "created_at", "updated_at", "email") VALUES('harrrison', '2011-07-03 10:18:09', '2011-07-03 10:18:09', 'harrison@thebarkers.me.uk')[0m
+Redirected to http://localhost:3000/users/1
+Completed in 23ms (DB: 0) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-03 11:18:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-03 11:18:21) [GET]
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2011-07-03 11:21:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/users/1]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-07-03 11:21:42) [GET]
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20110703101249)
+Migrating to CreateMicroposts (20110703102958)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "microposts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar(255), "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110703102958')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("microposts")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-03 11:30:57) [GET]
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 21ms (View: 17, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-07-03 11:36:12) [GET]
+
+ActionController::RoutingError (No route matches "/new" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-07-03 11:36:20) [GET]
+
+ActionController::RoutingError (No route matches "/micro" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-07-03 11:36:22) [GET]
+
+ActionController::RoutingError (No route matches "/micro" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2011-07-03 11:36:28) [GET]
+  [4;36;1mMicropost Load (0.2ms)[0m   [0;1mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 52ms (View: 18, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#new (for 127.0.0.1 at 2011-07-03 11:36:33) [GET]
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 64ms (View: 61, DB: 0) | 200 OK [http://localhost/microposts/new]
+
+
+Processing MicropostsController#create (for 127.0.0.1 at 2011-07-03 11:37:13) [POST]
+  Parameters: {"commit"=>"Create", "micropost"=>{"user_id"=>"1", "content"=>"hello"}, "authenticity_token"=>"gHBrNX4bgnTOHJb0+s7tlFL5HcUSuqR5gOZy5OsFnt0="}
+  [4;35;1mMicropost Create (0.2ms)[0m   [0mINSERT INTO "microposts" ("created_at", "updated_at", "user_id", "content") VALUES('2011-07-03 10:37:13', '2011-07-03 10:37:13', 1, 'hello')[0m
+Redirected to http://localhost:3000/microposts/1
+Completed in 22ms (DB: 0) | 302 Found [http://localhost/microposts]
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2011-07-03 11:37:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMicropost Load (0.1ms)[0m   [0;1mSELECT * FROM "microposts" WHERE ("microposts"."id" = 1) [0m
+Rendering template within layouts/microposts
+Rendering microposts/show
+Completed in 35ms (View: 32, DB: 0) | 200 OK [http://localhost/microposts/1]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2011-07-03 11:37:20) [GET]
+  [4;35;1mMicropost Load (0.3ms)[0m   [0mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 6ms (View: 3, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#new (for 127.0.0.1 at 2011-07-03 11:40:16) [GET]
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 41ms (View: 39, DB: 0) | 200 OK [http://localhost/microposts/new]
+
+
+Processing MicropostsController#create (for 127.0.0.1 at 2011-07-03 11:40:35) [POST]
+  Parameters: {"commit"=>"Create", "micropost"=>{"user_id"=>"1", "content"=>"ewe rewrw wre wer wer wer wer wer wer we"}, "authenticity_token"=>"gHBrNX4bgnTOHJb0+s7tlFL5HcUSuqR5gOZy5OsFnt0="}
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#create (for 127.0.0.1 at 2011-07-03 11:43:08) [POST]
+  Parameters: {"commit"=>"Create", "micropost"=>{"user_id"=>"1", "content"=>"ewe rewrw wre wer wer wer wer wer wer we"}, "authenticity_token"=>"gHBrNX4bgnTOHJb0+s7tlFL5HcUSuqR5gOZy5OsFnt0="}
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#create (for 127.0.0.1 at 2011-07-03 11:43:24) [POST]
+  Parameters: {"commit"=>"Create", "micropost"=>{"user_id"=>"1", "content"=>"ewe rewrw wre wer wer wer wer wer wer we"}, "authenticity_token"=>"gHBrNX4bgnTOHJb0+s7tlFL5HcUSuqR5gOZy5OsFnt0="}
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 65ms (View: 25, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#create (for 127.0.0.1 at 2011-07-03 11:43:27) [POST]
+  Parameters: {"commit"=>"Create", "micropost"=>{"user_id"=>"1", "content"=>"ewe rewrw wre wer wer wer wer wer wer we"}, "authenticity_token"=>"gHBrNX4bgnTOHJb0+s7tlFL5HcUSuqR5gOZy5OsFnt0="}
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-07-03 11:45:15) [GET]
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 68ms (View: 8, DB: 0) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing MicropostsController#create (for 127.0.0.1 at 2011-07-03 11:46:03) [POST]
+  Parameters: {"commit"=>"Create", "micropost"=>{"user_id"=>"1", "content"=>"ewe rewrw wre wer wer wer wer wer wer we"}, "authenticity_token"=>"gHBrNX4bgnTOHJb0+s7tlFL5HcUSuqR5gOZy5OsFnt0="}
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 10ms (View: 5, DB: 0) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2011-07-03 15:22:56) [GET]
+  [4;36;1mMicropost Load (15.1ms)[0m   [0;1mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 377ms (View: 343, DB: 15) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2011-07-03 15:24:17) [GET]
+  [4;35;1mMicropost Load (15.8ms)[0m   [0mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 220ms (View: 76, DB: 16) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2011-07-03 15:24:22) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mMicropost Load (0.1ms)[0m   [0;1mSELECT * FROM "microposts" WHERE ("microposts"."id" = 1) [0m
+Rendering template within layouts/microposts
+Rendering microposts/show
+Completed in 38ms (View: 34, DB: 0) | 200 OK [http://localhost/microposts/1]
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2011-07-03 15:24:29) [GET]
+  Parameters: {"id"=>"hello"}
+  [4;35;1mMicropost Load (13.1ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Micropost with ID=hello):
+  app/controllers/microposts_controller.rb:16:in `show'
+
+Rendered rescues/_trace (128.9ms)
+Rendered rescues/_request_and_response (38.6ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-03 15:24:51) [GET]
+  [4;36;1mUser Load (12.2ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 912ms (View: 88, DB: 12) | 200 OK [http://localhost/users]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2011-07-03 15:24:57) [GET]
+  [4;35;1mMicropost Load (18.9ms)[0m   [0mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 25ms (View: 3, DB: 19) | 200 OK [http://localhost/microposts]
+
+
+Processing MicropostsController#new (for 127.0.0.1 at 2011-07-03 15:24:58) [GET]
+Rendering template within layouts/microposts
+Rendering microposts/new
+Completed in 27ms (View: 24, DB: 0) | 200 OK [http://localhost/microposts/new]
+
+
+Processing MicropostsController#create (for 127.0.0.1 at 2011-07-03 15:25:27) [POST]
+  Parameters: {"commit"=>"Create", "micropost"=>{"user_id"=>"harrison", "content"=>"hello this is a test for figure 2.15"}, "authenticity_token"=>"G/c/TfhYvIhG/7vy0PM3LQc1ifziUVJkAJVTiBVQ+G8="}
+  [4;36;1mMicropost Create (34.5ms)[0m   [0;1mINSERT INTO "microposts" ("created_at", "updated_at", "user_id", "content") VALUES('2011-07-03 14:25:27', '2011-07-03 14:25:27', 0, 'hello this is a test for figure 2.15')[0m
+Redirected to http://localhost:3000/microposts/2
+Completed in 53ms (DB: 34) | 302 Found [http://localhost/microposts]
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2011-07-03 15:25:27) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mMicropost Load (0.1ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts"."id" = 2) [0m
+Rendering template within layouts/microposts
+Rendering microposts/show
+Completed in 40ms (View: 2, DB: 0) | 200 OK [http://localhost/microposts/2]
+
+
+Processing MicropostsController#edit (for 127.0.0.1 at 2011-07-03 15:25:37) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mMicropost Load (0.1ms)[0m   [0;1mSELECT * FROM "microposts" WHERE ("microposts"."id" = 2) [0m
+Rendering template within layouts/microposts
+Rendering microposts/edit
+Completed in 67ms (View: 64, DB: 0) | 200 OK [http://localhost/microposts/2/edit]
+
+
+Processing MicropostsController#update (for 127.0.0.1 at 2011-07-03 15:25:39) [PUT]
+  Parameters: {"commit"=>"Update", "micropost"=>{"user_id"=>"1", "content"=>"hello this is a test for figure 2.15"}, "authenticity_token"=>"G/c/TfhYvIhG/7vy0PM3LQc1ifziUVJkAJVTiBVQ+G8=", "id"=>"2"}
+  [4;35;1mMicropost Load (0.1ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts"."id" = 2) [0m
+  [4;36;1mMicropost Update (0.2ms)[0m   [0;1mUPDATE "microposts" SET "updated_at" = '2011-07-03 14:25:39', "user_id" = 1 WHERE "id" = 2[0m
+Redirected to http://localhost:3000/microposts/2
+Completed in 58ms (DB: 0) | 302 Found [http://localhost/microposts/2]
+
+
+Processing MicropostsController#show (for 127.0.0.1 at 2011-07-03 15:25:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mMicropost Load (0.1ms)[0m   [0mSELECT * FROM "microposts" WHERE ("microposts"."id" = 2) [0m
+Rendering template within layouts/microposts
+Rendering microposts/show
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/microposts/2]
+
+
+Processing MicropostsController#index (for 127.0.0.1 at 2011-07-08 17:56:52) [GET]
+  [4;36;1mMicropost Load (0.9ms)[0m   [0;1mSELECT * FROM "microposts" [0m
+Rendering template within layouts/microposts
+Rendering microposts/index
+Completed in 34ms (View: 24, DB: 1) | 200 OK [http://localhost/microposts]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2011-07-08 17:57:01) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 24ms (View: 14, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-07-08 17:57:33) [GET]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 15ms (View: 2, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-07-08 20:41:55) [GET]
+
+ActionController::RoutingError (No route matches "/hello" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-07-08 20:43:46) [GET]
+
+ActionController::RoutingError (No route matches "/controller/action" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-07-08 20:54:08) [GET]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 15ms (View: 2, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2011-07-09 08:00:16) [GET]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Completed in 15ms (View: 2, DB: 1) | 200 OK [http://localhost/rails/info/properties]
