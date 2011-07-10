@@ -12,6 +12,12 @@
   <component name="GemRequirementsHolder" version="3">
     <requirement>
       <requirement>
+        <dependency name="hoe" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source manual="true" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="rails" version="2.3.8" bound="EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="config/environment.rb" />
@@ -24,9 +30,28 @@
     </requirement>
     <requirement>
       <requirement>
+        <dependency name="rake" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source manual="true" />
+    </requirement>
+    <requirement>
+      <requirement>
         <dependency name="sqlite3-ruby" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
       </requirement>
       <source from="config/database.yml" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="test-unit" version="1.2.3" bound="EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source from="lib/tasks/rspec.rake" />
+      <source from="script/spec" />
+    </requirement>
+    <requirement>
+      <requirement>
+        <dependency name="test-unit" version="0" bound="GREATER_OR_EQUAL" git="false" path="false" doRequire="true" />
+      </requirement>
+      <source manual="true" />
     </requirement>
   </component>
   <component name="NewModuleRootManager">
@@ -36,23 +61,17 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] actionmailer (v2.3.8, /Library/Ruby/Gems/1.8/gems/actionmailer-2.3.8)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] actionpack (v2.3.8, /Library/Ruby/Gems/1.8/gems/actionpack-2.3.8)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rake (v0.8.7, /Users/Ronnie/.gem/ruby/1.8/gems/rake-0.8.7)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activerecord (v2.3.8, /Library/Ruby/Gems/1.8/gems/activerecord-2.3.8)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activesupport (v2.3.8, /Library/Ruby/Gems/1.8/gems/activesupport-2.3.8)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rails (v2.3.8, /Library/Ruby/Gems/1.8/gems/rails-2.3.8)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rack (v1.1.2, /Library/Ruby/Gems/1.8/gems/rack-1.1.2)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activeresource (v2.3.8, /Library/Ruby/Gems/1.8/gems/activeresource-2.3.8)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] sqlite3-ruby (v1.2.4, /Users/Ronnie/.gem/ruby/1.8/gems/sqlite3-ruby-1.2.4)" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="[gem] rake (v0.8.3, /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rake-0.8.3)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activesupport (v2.3.5, /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.5)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rack (v1.0.1, /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rack-1.0.1)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activeresource (v2.3.5, /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activeresource-2.3.5)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] actionpack (v2.3.5, /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.5)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] actionmailer (v2.3.5, /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/actionmailer-2.3.5)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] activerecord (v2.3.5, /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.5)" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="[gem] rails (v2.3.5, /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/rails-2.3.5)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rails (v2.3.8, /Users/Harrison/.gem/ruby/1.8/gems/rails-2.3.8)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] activerecord (v2.3.8, /Users/Harrison/.gem/ruby/1.8/gems/activerecord-2.3.8)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] actionmailer (v2.3.8, /Users/Harrison/.gem/ruby/1.8/gems/actionmailer-2.3.8)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] rack (v1.1.2, /Users/Harrison/.gem/ruby/1.8/gems/rack-1.1.2)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] activesupport (v2.3.8, /Users/Harrison/.gem/ruby/1.8/gems/activesupport-2.3.8)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] actionpack (v2.3.8, /Users/Harrison/.gem/ruby/1.8/gems/actionpack-2.3.8)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] sqlite3-ruby (v1.2.4, /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/sqlite3-ruby-1.2.4)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] activeresource (v2.3.8, /Users/Harrison/.gem/ruby/1.8/gems/activeresource-2.3.8)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] hoe (v2.10.0, /Library/Ruby/Gems/1.8/gems/hoe-2.10.0)" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="[gem] test-unit (v1.2.3, /Library/Ruby/Gems/1.8/gems/test-unit-1.2.3)" level="application" />
   </component>
 </module>
 
